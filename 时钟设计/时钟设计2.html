@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*
+			{
+				padding: 0px;
+				margin: 0px;
+			}
+			html,body
+			{
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: blueviolet;
+			}
+			.wrap
+			{
+				height: 500px;
+				width: 500px;
+				border-radius:250px ;
+				border: green solid 5px;
+				background-color: gainsboro;
+				position: relative;
+			}
+			.wrap .num-wrap{
+				height: 100%;
+				width: 100%;
+				position: absolute;
+			}
+			.wrap .num-wrap .num{
+				height: 40px;
+				width: 40px;
+				display: block;
+				top: 230px;
+				left: 230px;
+				font-size: 20px;
+				line-height: 40px;
+				text-align: center;
+				position: absolute;
+			}
+			.wrap .point-wrap{
+				height: 100%;
+				width: 100%;
+				position: absolute;
+			}
+			#hour{
+				height: 120px;
+				width: 12px;
+				position: absolute;
+				background-color: red;
+				top: 136px;
+				left: 244px;
+				transform-origin:6px 114px;
+				border-radius:200px ;
+			}
+			#min{
+				height: 160px;
+				width: 8px;
+				position: absolute;
+				background-color: orange;
+				top: 94px;
+				left: 246px;
+				transform-origin:4px 156px;
+				border-radius:200px ;
+				
+			}
+			#s{
+				height: 200px;
+				width: 4px;
+				position: absolute;
+				background-color: black;
+				top: 52px;
+				left: 248px;
+				transform-origin:2px 198px;
+				border-radius:200px ;
+			}
+			.kedu{
+				height: 20px;
+				width: 20px;
+				position:absolute ;
+				display: block;
+				top: 240px;
+				left: 240px;
+				line-height: 20px;
+				text-align: center;
+				font-size: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="num-wrap">
+			   <span class="num" style="color: red;">XII</span>
+			   <span class="num">I</span>
+			   <span class="num">II</span>
+			   <span class="num" style="color: red;">III</span>
+			   <span class="num">IV</span>
+			   <span class="num">V</span>
+			   <span class="num" style="color: red;">VI</span>
+			   <span class="num">VII</span>
+			   <span class="num">VIII</span>
+			   <span class="num" style="color: red;">IX</span>
+			   <span class="num">X</span>
+			   <span class="num">XI</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   <span class="kedu">|</span>
+			   
+			</div>
+			<div class="point-wrap">
+				<div id="hour"></div>
+				<div id="min"></div>
+                <div id="s"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var num=document.getElementsByClassName("num")
+			var kedu=document.getElementsByClassName("kedu")
+			for(var i=0;i<num.length;i++){
+				var r=230
+				var y=-r*Math.cos(i*Math.PI/6)
+				var x=r*Math.sin(i*Math.PI/6)
+				num[i].style.transform='translateY(' + y +'px)'+' translateX('+x+'px)'
+			}
+			for(var j=0;j<kedu.length;j++){
+				if(j%5==0){
+					kedu[j].innerHTML=''
+					continue;
+				}
+				var r=240
+				var y1=-r*Math.cos(j*Math.PI/30)
+				var x1=r*Math.sin(j*Math.PI/30)
+				kedu[j].style.transform='translateY(' + y1+'px)'+' translateX('+x1+'px)'+' rotate('+ j*6+'deg)'
+			}
+			var h=document.getElementById('hour')
+			var m=document.getElementById('min')
+			var s=document.getElementById('s')
+			var move=function(){
+				var date1=new Date()
+				var h1=date1.getHours()
+				var m1=date1.getMinutes()
+				var s1=date1.getSeconds()
+				var sec=s1*6
+				var minu=m1*6+s1*0.1
+				var hou=h1*30+m1*0.5+s1/120
+				h.style.transform='rotate('+hou +'deg)'
+				m.style.transform='rotate('+minu +'deg)'
+				s.style.transform='rotate('+sec+'deg)'
+					
+			}
+			setInterval(move,1000)
+		</script>
+	</body>
+</html>
