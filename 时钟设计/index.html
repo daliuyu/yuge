@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: blueviolet;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			*
+			{
+				margin: 0px;
+				padding: 0px;
+			}
+			.wrap
+			{
+				top: 50px;
+				width: 500px;
+				height: 500px;
+				background-color: gray;
+				border-radius: 250px;
+				border: ;
+				position: relative;
+				
+			}
+			.wrap .num-wrap
+			{
+				width: 100%;
+				height: 100%;
+			}
+			.wrap .num-wrap .num
+			{
+				width: 40px;
+				height: 40px;
+				dicsplay: block;
+				text-align:center ;
+				line-height: 40px;
+				
+				background-color: white;
+				border-radius: 20px;
+				position: absolute;
+				left: 230px;
+				top: 230px;
+				
+				
+			}
+			.wrap .pointer-wrap
+			{
+				width: 100%;
+				height: 100%;
+			}
+			#hour
+			{
+		       width: 12px;
+		       height: 160px;
+		       background-color: green;
+		       top: 100px;
+		       left: 244px;
+		       transform: rotate(30deg);
+		       transform-origin:6px 74px;
+		       position: absolute;
+			}
+			#min
+			{
+				width: 10px;
+		       height: 180px;
+		       background-color: red;
+		       top: 80px;
+		       left: 244px;
+		       position: absolute;
+			}
+			#second
+			{
+				width: 8px;
+		       height: 200px;
+		       background-color: black;
+		       top: 60px;
+		       left: 244px;
+		       position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="num-wrap">
+			<span class="num">12</span>
+			<span class="num">1</span>
+			<span class="num">2</span>
+			<span class="num">3</span>
+			<span class="num">4</span>
+			<span class="num">5</span>
+			<span class="num">6</span>
+			<span class="num">7</span>
+			<span class="num">8</span>
+			<span class="num">9</span>
+			<span class="num">10</span>
+			<span class="num">11</span>
+			</div>
+			<div class="pointer-wrap">
+				<div id="hour"></div>
+				<div id="min"></div>
+				<div id="second"></div>
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			var r=250;
+		    var nums=document.getElementsByClassName('num')
+		    for(var i=0;i<nums.length;i++)
+		    {
+		    	var x=0,y=0;
+		        y=-r*Math.cos(i*Math.PI/6)
+		        x=r*Math.sin(i*Math.PI/6)
+		        console.log(x,y)
+		        nums[i].style.transform='translateY('+y+'px)'+'translateX('+x+'px)';
+		    }
+		    var sPointer=document.getElementById('hour')
+		    var fPointer=document.getElementById('min')
+		    var mPointer=document.getElementById('second')
+		    
+		    mPointer=r
+//		    var getPosition=function(width,height)
+//		    {
+//		    	var left=250-width/2
+//		    	var top=250-(height-width/2)
+//		    	
+//		    	var x=width/2          //xuanzhuanhzongxin
+//		    	var y=height-width/2
+//		    	console.log(left,top,x,y)
+//		    }
+//		    
+		    
+		</script>
+	</body>
+</html>

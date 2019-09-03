@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>魔方</name>
+	<name>时钟设计</name>
 	<comment>Create By HBuilder</comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1526696562242</id>
+			<id>1528455830815</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
